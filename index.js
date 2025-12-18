@@ -16,7 +16,6 @@ app.use(cors({
   credentials: true
 }));
 
-app.options('/*', cors());
 
 // 2️⃣ Parse JSON bodies
 app.use(express.json());
