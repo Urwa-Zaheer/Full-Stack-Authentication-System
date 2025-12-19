@@ -19,9 +19,7 @@ app.use(cors({
 app.use(express.json());
 
 /* OPTIONS HANDLER */
-app.options("/*", (req, res) => {
-  res.sendStatus(200);
-});
+app.options(/.*/, (req, res) => res.sendStatus(200));
 
 /* ROUTES */
 app.use("/api/auth", authRoutes);
