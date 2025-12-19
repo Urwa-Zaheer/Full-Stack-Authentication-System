@@ -18,7 +18,6 @@ app.use(cors({
 
 app.use(express.json());
 
-/* OPTIONS HANDLER */
 app.all("/:all(*)", (req, res) => {
   res.send("Fallback route");
 });
