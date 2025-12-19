@@ -25,8 +25,9 @@ app.use("/api/auth", authRoutes);
 app.get("/", (req, res) => {
   res.send("🚀 Backend running on Railway");
 });
-app.all("*", (req, res) => {
-  res.status(404).send("Fallback route: Page not found");
+
+app.use((req, res, next) => {
+  res.status(404).json({ success: false, message: "Route not found" });
 });
 
 /* DATABASE */
