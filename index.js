@@ -29,7 +29,7 @@ app.get("/", (req, res) => {
   res.send("🚀 Backend running on Railway");
 });
 
-app.all("/*", (req, res) => {
+app.all("*", (req, res) => {
   res.status(404).send("Fallback route: Page not found");
 });
 /* DATABASE */
