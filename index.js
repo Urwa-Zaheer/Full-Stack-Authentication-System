@@ -19,7 +19,8 @@ app.use(cors({
 app.use(express.json());
 
 /* OPTIONS HANDLER */
-app.options("/*", (req, res) => {
+app.options("/*
+            ", (req, res) => {
   res.sendStatus(200);
 });
 
