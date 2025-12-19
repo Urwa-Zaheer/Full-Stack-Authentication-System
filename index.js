@@ -19,7 +19,10 @@ app.use(cors({
 app.use(express.json());
 
 /* OPTIONS HANDLER */
-app.options(/.*/, (req, res) => res.sendStatus(200));
+app.all("/:all(*)", (req, res) => {
+  res.send("Fallback route");
+});
+
 
 /* ROUTES */
 app.use("/api/auth", authRoutes);
