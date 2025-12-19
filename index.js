@@ -10,7 +10,7 @@ const app = express();
 
 /* CORS FIRST */
 app.use(cors({
- origin: "https://full-stack-authentication-system-fr.vercel.app/",
+ origin: "https://full-stack-authentication-system-fr.vercel.app",
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true
