@@ -18,9 +18,6 @@ app.use(cors({
 
 app.use(express.json());
 
-
-
-
 /* ROUTES */
 app.use("/api/auth", authRoutes);
 
@@ -28,10 +25,10 @@ app.use("/api/auth", authRoutes);
 app.get("/", (req, res) => {
   res.send("🚀 Backend running on Railway");
 });
-
 app.all("*", (req, res) => {
   res.status(404).send("Fallback route: Page not found");
 });
+
 /* DATABASE */
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB connected"))
